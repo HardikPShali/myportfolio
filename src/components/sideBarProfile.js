@@ -11,17 +11,17 @@ const sideBarProfile = () => {
                     <div class="mx-4 mt-12 text-center user-info lg:mx-6">
                         <a class='w-36 h-36 mb-2.5 block mx-auto border-6 border-platinum dark:border-[#2f2f2f] overflow-hidden rounded-full' href='/'>
                             <img
-                                src="assets/img/user-sidebar-thumb.png"
+                                src="assets/img/HardikShali-darktheme.png"
                                 class="hidden dark:block w-full h-full rounded-full"
-                                alt="Brown Reddick" />
+                                alt="Hardik Shali" />
                             {/* <!--Image for Dark Version --> */}
                             <img
-                                src="assets/img/user-sidebar-thumb-light.png"
+                                src="assets/img/HardikShali-whitetheme.jpg"
                                 class="dark:hidden w-full h-full rounded-full"
-                                alt="Brown Reddick" />
+                                alt="Hardik Shali" />
                             {/* <!--Image for Light Version --> */}
                         </a>
-                        <h6 class="mb-1 text-lg font-semibold text-black dark:text-white name">Brown Reddick</h6>
+                        <h6 class="mb-1 text-lg font-semibold text-black dark:text-white name">Hardik Shali</h6>
                         <div class="leading-none cd-headline clip is-full-width">
                             <h6 class="text-sm cd-words-wrapper designation text-theme after:!bg-theme">
                                 <b class="font-normal is-visible">Web Developer</b>
@@ -77,7 +77,7 @@ const sideBarProfile = () => {
                             </div>
                         </div>
                         <div class="mt-6">
-                            <a href="mycv.html" download target="_blank"
+                            <a href="assets/img/Hardik's Resume.pdf" download target="_blank"
                                 class="text-center text-sm border border-theme bg-theme flex items-center justify-center gap-2 text-white rounded-4xl py-3.5 transition duration-300 text-[15px] font-semibold hover:bg-themeHover hover:border-themeHover">
                                 DOWNLOAD CV
                                 <span class="animate-bounce">

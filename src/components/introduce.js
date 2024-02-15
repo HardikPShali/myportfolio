@@ -44,14 +44,8 @@ const introduce = () => {
 
                     </div>
                     <div class="hero-image flex-[0_0_20.3rem] max-md:hidden">
-                        <img
-                            src="assets/img/hero-img-1.png"
-                            class="dark:hidden"
-                            alt="Hero Image - Light Mode" />
-                        <img
-                            src="assets/img/hero-img-2.png"
-                            class="hidden dark:block"
-                            alt="Hero Image - Dark Mode" />
+                        <img src="assets/img/me12.jpg" class="dark:hidden" alt="Hero Image - Light Mode" />
+                        <img src="assets/img/me12.jpg" class="hidden dark:block" alt="Hero Image - Dark Mode" />
                     </div>
                 </div>
                 <div class="mb-2 mt-14 xl:mb-0 xl:mt-20">
