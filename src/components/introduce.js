@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Swiper from 'swiper';
+// import 'swiper/swiper-bundle.css';
 
 const Introduce = () => {
     useEffect(() => {
@@ -89,7 +90,7 @@ const Introduce = () => {
                                             <img src="assets/img/partners/h.png" alt="HealthierU" />
                                         </a>
                                     </div>
-                                    <div class="swiper-slide">
+                                    {/* <div class="swiper-slide">
                                         <a href="https://www.ralphlauren.com/" target='_blank'
                                             class="transition duration-200 flex-center">
                                             <img src="assets/img/partners/RL.png" alt="Ralph Lauren" />
@@ -106,7 +107,7 @@ const Introduce = () => {
                                             class="transition duration-200 flex-center">
                                             <img src="assets/img/partners/h.png" alt="HealthierU" />
                                         </a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
