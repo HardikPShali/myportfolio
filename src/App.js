@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 import MobileMenus from './components/mobileMenus';
 import SideBarProfile from './components/sideBarProfile';
 import NavBar from './components/navBar';
@@ -14,13 +13,18 @@ import Testimonial from './components/testimonial';
 import Contact from './components/contact';
 import Footer from './components/footer';
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
   return (
     <div className="App">
       <div class="relative pt-10 minfo__app max-xl:pt-20">
-        <div class="menu-overlay fixed top-0 left-0 w-full h-full bg-black/60 transition-all duration-200 z-999 opacity-0 invisible [&.is-menu-open]:visible [&.is-menu-open]:opacity-100">
+        <div className={`menu-overlay fixed top-0 left-0 w-full h-full bg-black/60 transition-all duration-200 z-999 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
         </div>
         <div class="max-lg:px-4">
-          <MobileMenus />
+        <MobileMenus toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
           <SideBarProfile />
           <NavBar />
           <div class="relative mx-auto minfo__contentBox max-w-container xl:max-2xl:max-w-65rem">

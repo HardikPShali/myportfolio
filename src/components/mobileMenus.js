@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const MobileMenus = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const handleMenuToggle = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+const MobileMenus = ({ toggleMenu, isMenuOpen }) => {
     return (
         <>
             {/* <!-- Mobile Menu Bar Start --> */}
-            <div
-                className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-2 px-3 bg-white/10 mobile-menu-bar sm:px-6 backdrop-blur-md xl:hidden">
+            <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-2 px-3 bg-white/10 mobile-menu-bar sm:px-6 backdrop-blur-md xl:hidden">
                 <div className="text-lg font-medium name">
                     <a className='flex items-center gap-2 text-black dark:text-white' href='index.html'>
                         <img src="assets/img/partners/1.svg" alt="HardikShali" width={100} />
@@ -18,9 +12,7 @@ const MobileMenus = () => {
                     </a>
                 </div>
                 {/* <!-- Mobile Hamburger Menu Start --> */}
-                <button className="w-12 h-12 border rounded-full hamburger menu_toggle bg-white dark:bg-nightBlack border-platinum dark:border-greyBlack flex-center"
-                    type="button"
-                    aria-label="Open Mobile Menu">
+                <button onClick={toggleMenu} className="w-12 h-12 border rounded-full hamburger menu_toggle bg-white dark:bg-nightBlack border-platinum dark:border-greyBlack flex-center" type="button" aria-label="Open Mobile Menu">
                     <svg viewBox="0 0 20 12" className="w-6"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -32,7 +24,12 @@ const MobileMenus = () => {
             </div>
             {/* <!-- Mobile Menu Bar End --> */}
             {/* <!-- Mobile Menu Sidebar Start --> */}
-            <div className="mobile-menu fixed top-0 -right-full w-full max-w-mobilemenu bg-flashWhite dark:bg-nightBlack z-999 h-full xl:hidden transition-all duration-300 [&.is-menu-open]:right-0 py-12 px-8 overflow-y-scroll">
+            <div style={{
+                paddingLeft: '2rem',
+                paddingRight: '2rem',
+                paddingTop: '3rem',
+                paddingBottom: '3rem'
+            }} class={`mobile-menu fixed top-0 right-0 w-full max-w-mobilemenu bg-flashWhite dark:bg-nightBlack z-999 h-full xl:hidden transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`} onClick={toggleMenu}>
                 <button className="absolute flex items-center justify-center w-9 h-9 text-sm text-white rounded-full close-menu top-4 right-4 bg-greyBlack" aria-label="Close Menu">
                     <i className="fal fa-times"></i>
                 </button>
