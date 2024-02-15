@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Swiper from 'swiper';
 // import 'swiper/swiper-bundle.css';
 
@@ -13,6 +13,28 @@ const Introduce = () => {
         });
     }, []);
 
+    const imagesData = [
+        { id: 1, src: 'assets/img/partners/RL.png', link: 'https://www.ralphlauren.com/' },
+        { id: 2, src: 'assets/img/partners/f.png', link: 'https://www.futuregrail.com/' },
+        { id: 3, src: 'assets/img/partners/h.png', link: 'https://www.instagram.com/healthieru_ae/' },
+        // { id: 4, src: 'assets/img/partners/logo1.svg' },
+        // { id: 5, src: 'assets/img/partners/logo2.svg' },
+        // { id: 6, src: 'assets/img/partners/logo3.svg' },
+        // { id: 7, src: 'assets/img/partners/logo4.svg' },
+    ];
+    const [startIndex, setStartIndex] = useState(0);
+    const [displayedImages, setDisplayedImages] = useState([]);
+
+    useEffect(() => {
+        setDisplayedImages(imagesData.slice(startIndex, startIndex + 3));
+    }, [startIndex, imagesData]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setStartIndex(prevIndex => (prevIndex + 3) % imagesData.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         //  <!-- Hero/Introduction Section Start -->
@@ -72,42 +94,13 @@ const Introduce = () => {
                         <div class="col-span-10 logo-slider">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a href="https://www.ralphlauren.com/" target='_blank'
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/RL.png" alt="Ralph Lauren" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://www.futuregrail.com/" target='_blank'
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/f.png" alt="FutureGrail" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://www.instagram.com/healthieru_ae/" target='_blank'
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/h.png" alt="HealthierU" />
-                                        </a>
-                                    </div>
-                                    {/* <div class="swiper-slide">
-                                        <a href="https://www.ralphlauren.com/" target='_blank'
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/RL.png" alt="Ralph Lauren" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://www.futuregrail.com/" target='_blank'
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/f.png" alt="FutureGrail" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://www.instagram.com/healthieru_ae/" target='_blank'
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/h.png" alt="HealthierU" />
-                                        </a>
-                                    </div> */}
+                                    {displayedImages.map(image => (
+                                        <div key={image.id} className="swiper-slide">
+                                            <a href={image.link} target='_blank' className="transition duration-200 flex-center">
+                                                <img src={image.src} alt={`Partner ${image.id}`} height={100} width={150} />
+                                            </a>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
