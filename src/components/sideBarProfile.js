@@ -9,7 +9,7 @@ const sideBarProfile = () => {
 
                 <div class="p-3 mb-3 overflow-hidden minfo__sidebar bg-white dark:bg-nightBlack rounded-2xl">
                     <div class="mx-4 mt-12 text-center user-info lg:mx-6">
-                        <a class='w-36 h-36 mb-2.5 block mx-auto border-6 border-platinum dark:border-[#2f2f2f] overflow-hidden rounded-full' href='index.html'>
+                        <a class='w-36 h-36 mb-2.5 block mx-auto border-6 border-platinum dark:border-[#2f2f2f] overflow-hidden rounded-full' href='/'>
                             <img
                                 src="assets/img/user-sidebar-thumb.png"
                                 class="hidden dark:block w-full h-full rounded-full"

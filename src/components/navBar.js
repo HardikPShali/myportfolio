@@ -8,7 +8,7 @@ const navBar = () => {
 
             {/* <!-- Site Logo Start --> */}
             <div class="flex border rounded-full logo w-15 h-15 border-platinum dark:border-metalBlack flex-center">
-                <a href='index.html'>
+                <a href='/'>
                     <img src="assets/img/partners/1.svg" alt="HardikShali" />
                 </a>
             </div>
