@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import Swiper from 'swiper';
 
-const introduce = () => {
+const Introduce = () => {
+    useEffect(() => {
+        console.log('Initializing Swiper');
+        new Swiper('.swiper', {
+            // Swiper options here
+            slidesPerView: 3,
+            spaceBetween: 30,
+            // Add more options as needed
+        });
+    }, []);
+
+
     return (
         //  <!-- Hero/Introduction Section Start -->
         <div data-scroll-index="0" id="home"
@@ -16,11 +28,11 @@ const introduce = () => {
                     <div class="text-content pt-7 lg:pt-8 max-lg:max-w-[30rem]">
                         <h1
                             class="text-[32px] lg:text-5xl xl:text-4xl 2xl:text-5xl font-semibold text-black dark:text-white leading-1.27 lg:leading-1.27 xl:leading-1.27 2xl:leading-1.27 mb-4 lg:mb-5">
-                            I Craft The <br />
-                            <span class="text-theme">Digital Landscape</span>
+                            I Shape Frontend Experiences, <br />
+                            <span class="text-theme">I Uncover Data Insights</span>
                         </h1>
                         <p>
-                            I am a <span class="font-medium text-black dark:text-white/90">Frontend Developer</span> at heart and, i create features that are best suited for the job at hand.
+                            Frontend Developer by day,<span class="font-medium text-black dark:text-white/90"> Data Scientist by night</span>
                         </p>
                         <ul class="flex items-center mt-4 -mx-3 lg:mt-5">
                             <li class="flex items-center mx-3 text-regular">
@@ -37,7 +49,7 @@ const introduce = () => {
                                 <a href="#contact"
                                     class="btn-theme inline-flex items-center gap-2 bg-theme text-power__black py-4 md:py-4.5 lg:px-9 px-7 rounded-4xl leading-none transition-all duration-300 hover:shadow-theme_shadow text-white font-medium text-[15px] md:text-base">
                                     <i class="fal fa-paper-plane"></i>
-                                    HIRE ME
+                                    Let's Collaborate
                                 </a>
                             </li>
                         </ul>
@@ -60,57 +72,39 @@ const introduce = () => {
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="#"
+                                        <a href="https://www.ralphlauren.com/" target='_blank'
                                             class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo1.svg" alt="Partner Name" />
+                                            <img src="assets/img/partners/RL.png" alt="Ralph Lauren" />
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#"
+                                        <a href="https://www.futuregrail.com/" target='_blank'
                                             class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo2.svg" alt="Partner Name" />
+                                            <img src="assets/img/partners/f.png" alt="FutureGrail" />
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#"
+                                        <a href="https://www.instagram.com/healthieru_ae/" target='_blank'
                                             class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo3.svg" alt="Partner Name" />
+                                            <img src="assets/img/partners/h.png" alt="HealthierU" />
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#"
+                                        <a href="https://www.ralphlauren.com/" target='_blank'
                                             class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo4.svg" alt="Partner Name" />
+                                            <img src="assets/img/partners/RL.png" alt="Ralph Lauren" />
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#"
+                                        <a href="https://www.futuregrail.com/" target='_blank'
                                             class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo2.svg" alt="Partner Name" />
+                                            <img src="assets/img/partners/f.png" alt="FutureGrail" />
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#"
+                                        <a href="https://www.instagram.com/healthieru_ae/" target='_blank'
                                             class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo4.svg" alt="Partner Name" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#"
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo2.svg" alt="Partner Name" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#"
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo4.svg" alt="Partner Name" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#"
-                                            class="transition duration-200 flex-center">
-                                            <img src="assets/img/partners/logo2.svg" alt="Partner Name" />
+                                            <img src="assets/img/partners/h.png" alt="HealthierU" />
                                         </a>
                                     </div>
                                 </div>
@@ -125,4 +119,4 @@ const introduce = () => {
     )
 }
 
-export default introduce
+export default Introduce

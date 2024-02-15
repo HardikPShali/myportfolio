@@ -24,9 +24,9 @@ const sideBarProfile = () => {
                         <h6 class="mb-1 text-lg font-semibold text-black dark:text-white name">Hardik Shali</h6>
                         <div class="leading-none cd-headline clip is-full-width">
                             <h6 class="text-sm cd-words-wrapper designation text-theme after:!bg-theme">
-                                <b class="font-normal is-visible">Web Developer</b>
-                                <b class="font-normal">Photographers</b>
-                                <b class="font-normal">Web Designer</b>
+                                <b class="font-normal is-visible">Software Engineer</b>
+                                <b class="font-normal">Data Scientist</b>
+                                <b class="font-normal">Frontend Developer</b>
                             </h6>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ const sideBarProfile = () => {
 
 
                     <div class="px-4 py-5 lg:py-6 lg:px-6 rounded-2xl md:px-8 bg-flashWhite dark:bg-metalBlack">
-                        <div class="text-sm font-medium text-black dark:text-white">Skills</div>
+                        {/* <div class="text-sm font-medium text-black dark:text-white">Skills</div>
                         <div class="flex items-center justify-between my-4 space-x-4 skills_circle">
                             <div class="space-y-2 text-center progressCircle">
                                 <div class="relative w-12 h-12 circle" data-percent="90">
@@ -75,7 +75,7 @@ const sideBarProfile = () => {
                                 </div>
                                 <p class="text-[13px] font-normal dark:font-light text-black dark:text-white/90">PHP</p>
                             </div>
-                        </div>
+                        </div> */}
                         <div class="mt-6">
                             <a href="assets/img/Hardik's Resume.pdf" download target="_blank"
                                 class="text-center text-sm border border-theme bg-theme flex items-center justify-center gap-2 text-white rounded-4xl py-3.5 transition duration-300 text-[15px] font-semibold hover:bg-themeHover hover:border-themeHover">
