@@ -44,18 +44,6 @@ const Skills = () => {
         setDisplayedSkills(skillsData.slice(startIndex, startIndex + 3));
     }, [startIndex]);
 
-    // This useEffect ensures that the progress circles are updated whenever the displayed skills change
-    useEffect(() => {
-        // Code to initialize or update the progress circles
-        // This code should be based on your existing implementation for progress circles
-        // For example:
-        const progressCircles = document.querySelectorAll('.progressCircle');
-        progressCircles.forEach(circle => {
-            const percent = circle.getAttribute('data-percent');
-            // Code to set the progress circle based on the percent
-        });
-    }, [displayedSkills]);
-
     return (
         <div data-scroll-index="3" id="skill"
             class="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">

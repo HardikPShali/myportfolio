@@ -23,11 +23,43 @@ const certificates = () => {
                 </div>
 
                 <div class="blog-list md:space-y-7.5 space-y-5">
-
                     <div
                         class="grid md:gap-2 grid-cols-12 overflow-hidden article group bg-flashWhite dark:bg-metalBlack items-center rounded-2xl p-3.5">
                         <div class="flex col-span-12 overflow-hidden thumbnail sm:col-span-6 md:col-span-5">
-                            <a class='block w-full overflow-hidden rounded-xl' href='article-details.html'>
+                            <a class='block w-full overflow-hidden rounded-xl' >
+                                <img src="assets/img/blog/webdev.png" style={{ objectFit: "fill" }}
+                                    class="object-cover object-center w-full h-full min-h-[288px] transition-all duration-300 ease-in-out max-h-60 md:min-h-60 group-hover:scale-105"
+                                    alt="Post Title" />
+                            </a>
+                        </div>
+                        <div
+                            class="relative flex flex-col col-span-12 px-3 pt-6 pb-2 md:p-5 post-content sm:col-span-6 md:col-span-7">
+                            <div class="flex items-center gap-5">
+                                <div class="text-sm font-medium tags">
+                                    <a href="#" class="transition-colors hover:text-theme">
+                                        Udemy
+                                    </a>,
+                                    <span class="post_date">
+                                        Feb 16, 2024
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="post-title mt-3 md:mt-4.5 mb-6 md:mb-8">
+                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme' href='https://www.udemy.com/certificate/UC-01eef055-84cb-4773-aeca-7ff22e83a662/' target='_target'>
+                                    The Complete 2024 Web Development Bootcamp
+                                </a>
+                            </div>
+                            <div class="read-details">
+                                <a class='inline-flex items-center gap-2 border border-theme text-theme text-sm py-3.5 px-6 rounded-3xl leading-none transition-all duration-300 hover:bg-themeHover hover:border-themeHover dark:font-medium hover:text-white'>
+                                    See Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="grid md:gap-2 grid-cols-12 overflow-hidden article group bg-flashWhite dark:bg-metalBlack items-center rounded-2xl p-3.5">
+                        <div class="flex col-span-12 overflow-hidden thumbnail sm:col-span-6 md:col-span-5">
+                            <a class='block w-full overflow-hidden rounded-xl'>
                                 <img src="assets/img/blog/syndigo.png" style={{ objectFit: "fill" }}
                                     class="object-cover object-center w-full h-full min-h-[288px] transition-all duration-300 ease-in-out max-h-60 md:min-h-60 group-hover:scale-105"
                                     alt="Post Title" />
@@ -46,7 +78,7 @@ const certificates = () => {
                                 </div>
                             </div>
                             <div class="post-title mt-3 md:mt-4.5 mb-6 md:mb-8">
-                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme' href='article-details.html'>
+                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme'>
                                     MDM For Implementation Consultant
                                 </a>
                             </div>
@@ -60,7 +92,7 @@ const certificates = () => {
                     <div
                         class="grid md:gap-2 grid-cols-12 overflow-hidden article group bg-flashWhite dark:bg-metalBlack items-center rounded-2xl p-3.5">
                         <div class="flex col-span-12 overflow-hidden thumbnail sm:col-span-6 md:col-span-5">
-                            <a class='block w-full overflow-hidden rounded-xl' href='article-details.html'>
+                            <a class='block w-full overflow-hidden rounded-xl'>
                                 <img src="assets/img/blog/python.png" style={{ objectFit: "fill" }}
                                     class="object-cover object-center w-full h-full min-h-[288px] transition-all duration-300 ease-in-out max-h-60 md:min-h-60 group-hover:scale-105"
                                     alt="Post Title" />
@@ -79,7 +111,7 @@ const certificates = () => {
                                 </div>
                             </div>
                             <div class="post-title mt-3 md:mt-4.5 mb-6 md:mb-8">
-                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme' href='article-details.html'>
+                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme'>
                                     The Complete Python Bootcamp From Zero To Hero In Python
                                 </a>
                             </div>
@@ -93,7 +125,7 @@ const certificates = () => {
                     <div
                         class="grid md:gap-2 grid-cols-12 overflow-hidden article group bg-flashWhite dark:bg-metalBlack items-center rounded-2xl p-3.5">
                         <div class="flex col-span-12 overflow-hidden thumbnail sm:col-span-6 md:col-span-5">
-                            <a class='block w-full overflow-hidden rounded-xl' href='article-details.html'>
+                            <a class='block w-full overflow-hidden rounded-xl' >
                                 <img src="assets/img/blog/datascience.png" style={{ objectFit: "fill" }}
                                     class="object-cover object-center w-full h-full min-h-[288px] transition-all duration-300 ease-in-out max-h-60 md:min-h-60 group-hover:scale-105"
                                     alt="Post Title" />
@@ -112,7 +144,7 @@ const certificates = () => {
                                 </div>
                             </div>
                             <div class="post-title mt-3 md:mt-4.5 mb-6 md:mb-8">
-                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme' href='article-details.html'>
+                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme' >
                                     The Data Science Course: Complete Data Science Bootcamp 2023 (Udemy)
                                 </a>
                             </div>
@@ -123,39 +155,7 @@ const certificates = () => {
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="grid md:gap-2 grid-cols-12 overflow-hidden article group bg-flashWhite dark:bg-metalBlack items-center rounded-2xl p-3.5">
-                        <div class="flex col-span-12 overflow-hidden thumbnail sm:col-span-6 md:col-span-5">
-                            <a class='block w-full overflow-hidden rounded-xl' href='article-details.html'>
-                                <img src="assets/img/blog/webdev.png" style={{ objectFit: "fill" }}
-                                    class="object-cover object-center w-full h-full min-h-[288px] transition-all duration-300 ease-in-out max-h-60 md:min-h-60 group-hover:scale-105"
-                                    alt="Post Title" />
-                            </a>
-                        </div>
-                        <div
-                            class="relative flex flex-col col-span-12 px-3 pt-6 pb-2 md:p-5 post-content sm:col-span-6 md:col-span-7">
-                            <div class="flex items-center gap-5">
-                                <div class="text-sm font-medium tags">
-                                    <a href="#" class="transition-colors hover:text-theme">
-                                        Udemy
-                                    </a>,
-                                    <span class="post_date">
-                                        Feb 2, 2022
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="post-title mt-3 md:mt-4.5 mb-6 md:mb-8">
-                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme' href='article-details.html'>
-                                    The Complete 2023 Web Development Bootcamp
-                                </a>
-                            </div>
-                            <div class="read-details">
-                                <a class='inline-flex items-center gap-2 border border-theme text-theme text-sm py-3.5 px-6 rounded-3xl leading-none transition-all duration-300 hover:bg-themeHover hover:border-themeHover dark:font-medium hover:text-white' href='article-details.html'>
-                                    See Certificate
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
 
                 {/* <div class="mt-10 text-center more-blogs md:mt-13">
