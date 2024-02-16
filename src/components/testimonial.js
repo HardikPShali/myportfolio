@@ -3,25 +3,36 @@ import React, { useState, useEffect } from 'react';
 const Testimonials = () => {
     const testimonialsData = [
         {
-            imageSrc: "assets/img/testimonial/author1.png",
-            ratings: 5,
-            content: "Working with Reddick is a game-changer. Their coding expertise and commitment to quality make every project a success.",
-            authorName: "Alex Johnson",
-            role: "Developer"
+            rating: 5,
+            content: "Hardik is a real go-to person for any project he is into. Such a passionate supporter for the lead/manager he is. Whenever there is some kind of chaos or crisis, he never escalates that situation but ensures that others also become cool so that all can focus on implementing a solution to the Problem. I wholeheartedly recommend him for the career opportunities he is going to pursue. All the best my boy!",
+            author: "Anand Venkitaraman",
+            role: "Delivery Manager",
+            linkedin: "https://www.linkedin.com/in/anandvcetsdm/",
+            imageSrc: "assets/img/testimonial/Anand.jpg"
         },
         {
-            imageSrc: "assets/img/testimonial/author2.png",
-            ratings: 5,
-            content: "Reddick exceeds expectations with top-tier coding skills. Reliable, collaborative, and a true asset to any project. Highly recommended.",
-            authorName: "Mily Martin",
-            role: "CEO - itTheme"
+            rating: 5,
+            content: "It was a pleasure working with Hardik due to his work ethics and professional behaviour, but at the same time, having a fun and lovely attitude that shines across each conversation. You could visibly see his commitment during times of crisis, and I could have always expected nothing but the best effort from him when the situation demanded it. I would recommend him to any team that would like to have a committed and professional resource. Stay blessed.",
+            author: "Tharun Abraham Elias",
+            role: "Project Manager",
+            linkedin: "https://www.linkedin.com/in/tharun-abraham-elias-7644531b2/",
+            imageSrc: "assets/img/testimonial/Tharun.jpg"
         },
         {
-            imageSrc: "assets/img/testimonial/author1.png",
-            ratings: 5,
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            authorName: "John Doe",
-            role: "Designer"
+            rating: 5,
+            content: "I had the pleasure of working with Hardik for a year while he was a React Developer at Accubits Technologies. During this time, I witnessed his strong logic knowledge and impressive UI skills. Hardik's contributions to our healthcare product were invaluable, and he played a significant role in completing the authentication and appointment booking module in a timely manner.\n\nHardik's technical expertise in React was apparent from the start, and his ability to understand complex problems and create solutions was impressive. He was always willing to collaborate with the team and share his knowledge to improve the quality of our work. His commitment to delivering high-quality code was evident, and he always went the extra mile to ensure that everything was functioning as intended.\n\nIn addition to his technical abilities, I was impressed by Hardik's professionalism and work ethic. He was always punctual, reliable, and able to manage his time effectively. His positive attitude and willingness to take on new challenges made him a valuable member of our team.\n\nOverall, I highly recommend Hardik for any future opportunities. With his strong logic knowledge, excellent UI skills, and proven ability to complete projects on time, I have no doubt that he will continue to be a valuable asset to any organization.",
+            author: "Nithya Rajan",
+            role: "Technical Team Lead",
+            linkedin: "https://www.linkedin.com/in/bearnithi/",
+            imageSrc: "assets/img/testimonial/NithyaSmall.png"
+        },
+        {
+            rating: 5,
+            content: "Hardik is an extremely dedicated and talented professional who consistently demonstrates a strong work ethic and a commitment to excellence. He is highly skilled in javascript, his attention to detail and ability to think creatively make him a valuable asset to any team. He is also a great communicator and team player, always willing to collaborate and share his ideas to help move projects forward.",
+            author: "Jayakrishnan A V",
+            role: "Technical Lead",
+            linkedin: "https://www.linkedin.com/in/jayakrishnan-a-v-528a16112/",
+            imageSrc: "assets/img/testimonial/Jay.jpg"
         }
     ];
 
@@ -70,19 +81,55 @@ const Testimonials = () => {
                 </div>
 
                 <div class="mt-12 testimonial-slider">
-                    <div class="swiper" style={{ justifyContent: 'center' }}>
-                        <div className="swiper-wrapper">
+                    <div class="swiper">
+                        <div className="swiper-wrapper" style={{ justifyContent: 'center' }}>
                             {displayedTestimonials.map((testimonial, index) => (
                                 <div key={index} className="swiper-slide">
                                     <div className="text-center slider-inner md:px-5">
                                         <div className="image flex-center">
-                                            <img src={testimonial.imageSrc} alt="" />
+                                            <img src={testimonial.imageSrc} alt="" className="rounded-full" style={{ width: 150, height: 150 }} />
                                         </div>
-                                        <div className="text-sm md:text-[15px] leading-loose content">
-                                            {testimonial.content}
+                                        <div class="mt-12 mb-3 text-center rating text-lightOrange">
+                                            {/* <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.4391 5.35656L10.1019 4.65667C10.0073 4.64115 9.92204 4.58373 9.87552 4.49217L7.86898 0.579903C7.69686 0.241595 7.21151 0.241595 7.03784 0.579903L5.0313 4.49217C4.98788 4.57753 4.9057 4.64115 4.80491 4.65667L0.467749 5.35656C0.0878407 5.41864 -0.0563694 5.87799 0.211892 6.14802L3.31008 9.26728C3.37521 9.33556 3.41088 9.43178 3.39537 9.53265L2.72239 13.8763C2.66346 14.2581 3.05113 14.539 3.39382 14.3667L7.31385 12.3819C7.39914 12.3384 7.50148 12.3353 7.59297 12.3819L11.513 14.3667C11.8572 14.5405 12.2434 14.2566 12.186 13.8763L11.5146 9.54662C11.4944 9.44885 11.5223 9.34332 11.5983 9.26728L14.6949 6.14802C14.9632 5.87799 14.8159 5.41709 14.4391 5.35656Z"
+                                                    fill="#FFB657" />
+                                            </svg>
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.4391 5.35656L10.1019 4.65667C10.0073 4.64115 9.92204 4.58373 9.87552 4.49217L7.86898 0.579903C7.69686 0.241595 7.21151 0.241595 7.03784 0.579903L5.0313 4.49217C4.98788 4.57753 4.9057 4.64115 4.80491 4.65667L0.467749 5.35656C0.0878407 5.41864 -0.0563694 5.87799 0.211892 6.14802L3.31008 9.26728C3.37521 9.33556 3.41088 9.43178 3.39537 9.53265L2.72239 13.8763C2.66346 14.2581 3.05113 14.539 3.39382 14.3667L7.31385 12.3819C7.39914 12.3384 7.50148 12.3353 7.59297 12.3819L11.513 14.3667C11.8572 14.5405 12.2434 14.2566 12.186 13.8763L11.5146 9.54662C11.4944 9.44885 11.5223 9.34332 11.5983 9.26728L14.6949 6.14802C14.9632 5.87799 14.8159 5.41709 14.4391 5.35656Z"
+                                                    fill="#FFB657" />
+                                            </svg>
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.4391 5.35656L10.1019 4.65667C10.0073 4.64115 9.92204 4.58373 9.87552 4.49217L7.86898 0.579903C7.69686 0.241595 7.21151 0.241595 7.03784 0.579903L5.0313 4.49217C4.98788 4.57753 4.9057 4.64115 4.80491 4.65667L0.467749 5.35656C0.0878407 5.41864 -0.0563694 5.87799 0.211892 6.14802L3.31008 9.26728C3.37521 9.33556 3.41088 9.43178 3.39537 9.53265L2.72239 13.8763C2.66346 14.2581 3.05113 14.539 3.39382 14.3667L7.31385 12.3819C7.39914 12.3384 7.50148 12.3353 7.59297 12.3819L11.513 14.3667C11.8572 14.5405 12.2434 14.2566 12.186 13.8763L11.5146 9.54662C11.4944 9.44885 11.5223 9.34332 11.5983 9.26728L14.6949 6.14802C14.9632 5.87799 14.8159 5.41709 14.4391 5.35656Z"
+                                                    fill="#FFB657" />
+                                            </svg>
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.4391 5.35656L10.1019 4.65667C10.0073 4.64115 9.92204 4.58373 9.87552 4.49217L7.86898 0.579903C7.69686 0.241595 7.21151 0.241595 7.03784 0.579903L5.0313 4.49217C4.98788 4.57753 4.9057 4.64115 4.80491 4.65667L0.467749 5.35656C0.0878407 5.41864 -0.0563694 5.87799 0.211892 6.14802L3.31008 9.26728C3.37521 9.33556 3.41088 9.43178 3.39537 9.53265L2.72239 13.8763C2.66346 14.2581 3.05113 14.539 3.39382 14.3667L7.31385 12.3819C7.39914 12.3384 7.50148 12.3353 7.59297 12.3819L11.513 14.3667C11.8572 14.5405 12.2434 14.2566 12.186 13.8763L11.5146 9.54662C11.4944 9.44885 11.5223 9.34332 11.5983 9.26728L14.6949 6.14802C14.9632 5.87799 14.8159 5.41709 14.4391 5.35656Z"
+                                                    fill="#FFB657" />
+                                            </svg>
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.4391 5.35656L10.1019 4.65667C10.0073 4.64115 9.92204 4.58373 9.87552 4.49217L7.86898 0.579903C7.69686 0.241595 7.21151 0.241595 7.03784 0.579903L5.0313 4.49217C4.98788 4.57753 4.9057 4.64115 4.80491 4.65667L0.467749 5.35656C0.0878407 5.41864 -0.0563694 5.87799 0.211892 6.14802L3.31008 9.26728C3.37521 9.33556 3.41088 9.43178 3.39537 9.53265L2.72239 13.8763C2.66346 14.2581 3.05113 14.539 3.39382 14.3667L7.31385 12.3819C7.39914 12.3384 7.50148 12.3353 7.59297 12.3819L11.513 14.3667C11.8572 14.5405 12.2434 14.2566 12.186 13.8763L11.5146 9.54662C11.4944 9.44885 11.5223 9.34332 11.5983 9.26728L14.6949 6.14802C14.9632 5.87799 14.8159 5.41709 14.4391 5.35656Z"
+                                                    fill="#FFB657" />
+                                            </svg> */}
+                                        </div>
+                                        <div className="text-sm md:text-[15px] leading-loose content overflow-hidden max-h-20">
+                                            <div style={{ WebkitLineClamp: 4, display: '-webkit-box', WebkitBoxOrient: 'vertical' }}>
+                                                {testimonial.content}
+                                            </div>
                                         </div>
                                         <div className="mt-5 text-center author">
-                                            <h6 className="text-lg font-medium text-black dark:text-white">{testimonial.authorName}</h6>
+                                            <h6 className="text-lg font-medium text-black dark:text-white">
+                                                <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer">{testimonial.author}</a>
+                                            </h6>
                                             <p className="text-sm">{testimonial.role}</p>
                                         </div>
                                     </div>
