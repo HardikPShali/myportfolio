@@ -190,7 +190,7 @@ const resume = () => {
                                     Master's Degree In Data Science
                                 </h4>
                                 <p>
-                                    Currently in Berlin, Germany for MSc in Data Science.
+                                    Currently in Berlin, Germany for MSc in Data Science
                                 </p>
                             </div>
                         </li>
@@ -212,7 +212,7 @@ const resume = () => {
                                     Master's Degree In Information Technology MSc (IT)
                                 </h4>
                                 <p>
-                                    Finished MSc (I.T) from Surat, Gujarat, India.
+                                    Finished MSc (I.T) from Surat, Gujarat, India
                                 </p>
                             </div>
                         </li>
@@ -234,7 +234,7 @@ const resume = () => {
                                     Bachelor's Degree In Information Technology BSc (IT)
                                 </h4>
                                 <p>
-                                    Completed BSc (I.T) from Surat, Gujarat, India.
+                                    Completed BSc (I.T) from Surat, Gujarat, India
                                 </p>
                             </div>
                         </li>

@@ -145,7 +145,7 @@ const portfolio = () => {
                         More Projects
                     </a>
                 </div>
-            </div>s
+            </div>
         </div>
     )
 }
