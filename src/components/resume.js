@@ -51,7 +51,7 @@ const resume = () => {
                             <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
                                 <h6
                                     class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">
-                                    <a href='https://www.dataio.co/' target='_blank'>Dataio - On-Site</a>
+                                    <a href='https://www.dataio.co/' target='_blank'>Dataio</a>
                                 </h6>
                                 <p class="text-[13px] md:text-sm text-theme">
                                     Apr 2023 - Sep 2023
@@ -64,7 +64,7 @@ const resume = () => {
                                     Implementation Consultant
                                 </h4>
                                 <p>
-                                    Location - Surat, Gujarat, India
+                                    Location - Surat, Gujarat, India - On Site
                                 </p>
                             </div>
                         </li>
@@ -73,7 +73,7 @@ const resume = () => {
                             <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
                                 <h6
                                     class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">
-                                    <a href='https://accubits.com/' target='_blank'>Accubits Technologies Inc - Remote</a>
+                                    <a href='https://accubits.com/' target='_blank'>Accubits Technologies Inc</a>
                                 </h6>
                                 <p class="text-[13px] md:text-sm text-theme">
                                     Dec 2021 - Apr 2023
@@ -86,7 +86,7 @@ const resume = () => {
                                     Software Engineer
                                 </h4>
                                 <p>
-                                    Location - Thiruvananthapuram, Kerala, India
+                                    Location - Thiruvananthapuram, Kerala, India - Remote
                                 </p>
                             </div>
                         </li>
@@ -95,7 +95,7 @@ const resume = () => {
                             <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
                                 <h6
                                     class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">
-                                    <a href='https://www.vnsgu.ac.in/' target='_blank'>Vnsgu - Apprenticeship</a>
+                                    <a href='https://www.vnsgu.ac.in/' target='_blank'>Vnsgu</a>
                                 </h6>
                                 <p class="text-[13px] md:text-sm text-theme">
                                     Mar 2021 - Jul 2021
@@ -108,7 +108,7 @@ const resume = () => {
                                     Java Developer
                                 </h4>
                                 <p>
-                                    Location - Surat, Gujarat, India
+                                    Location - Surat, Gujarat, India - Remote
                                 </p>
                             </div>
                         </li>
@@ -117,7 +117,7 @@ const resume = () => {
                             <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
                                 <h6
                                     class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">
-                                    <a href='http://www.galaxydev.in/' target='_blank'>Galaxy Developers - Internship</a>
+                                    <a href='http://www.galaxydev.in/' target='_blank'>Galaxy Developers</a>
                                 </h6>
                                 <p class="text-[13px] md:text-sm text-theme">
                                     Dec 2020 - Feb 2021
@@ -130,7 +130,7 @@ const resume = () => {
                                     .NET Developer
                                 </h4>
                                 <p>
-                                    Location - Surat, Gujarat, India
+                                    Location - Surat, Gujarat, India - On Site
                                 </p>
                             </div>
                         </li>
@@ -139,7 +139,7 @@ const resume = () => {
                             <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
                                 <h6
                                     class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">
-                                    <a href='https://innovativeiteration.com/' target='_blank'> Innovative Iteration Software Solutions - Internship</a>
+                                    <a href='https://innovativeiteration.com/' target='_blank'> Innovative Iteration Software Solutions</a>
                                 </h6>
                                 <p class="text-[13px] md:text-sm text-theme">
                                     Feb 2020 - May 2020
@@ -152,7 +152,7 @@ const resume = () => {
                                     PHP Developer
                                 </h4>
                                 <p>
-                                    Location - Surat, Gujarat, India
+                                    Location - Surat, Gujarat, India - On Site
                                 </p>
                             </div>
                         </li>
