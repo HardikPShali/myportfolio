@@ -11,12 +11,12 @@ const sideBarProfile = () => {
                     <div class="mx-4 mt-12 text-center user-info lg:mx-6">
                         <a class='w-36 h-36 mb-2.5 block mx-auto border-6 border-platinum dark:border-[#2f2f2f] overflow-hidden rounded-full' href='/'>
                             <img
-                                src="assets/img/HardikShali-darktheme.png"
+                                src="assets/img/me12-whitetheme - mobile.png"
                                 class="hidden dark:block w-full h-full rounded-full"
                                 alt="Hardik Shali" />
                             {/* <!--Image for Dark Version --> */}
                             <img
-                                src="assets/img/HardikShali-whitetheme.jpg"
+                                src="assets/img/me12-whitetheme - mobile.png"
                                 class="dark:hidden w-full h-full rounded-full"
                                 alt="Hardik Shali" />
                             {/* <!--Image for Light Version --> */}
