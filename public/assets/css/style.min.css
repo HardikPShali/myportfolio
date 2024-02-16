@@ -7357,3 +7357,10 @@ html.dark .portfolio_wrapper .info span {
 :is(.dark .dark\:\[\&\>svg\]\:fill-white>svg) {
   fill: #fff;
 }
+/* CSS for hiding the scrollbar */
+
+.testi-content::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+

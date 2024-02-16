@@ -84,7 +84,7 @@ const Testimonials = () => {
                     <div class="swiper">
                         <div className="swiper-wrapper" style={{ justifyContent: 'center' }}>
                             {displayedTestimonials.map((testimonial, index) => (
-                                <div key={index} className="swiper-slide">
+                                <div key={index} className="testi-swiper-slide">
                                     <div className="text-center slider-inner md:px-5">
                                         <div className="image flex-center">
                                             <img src={testimonial.imageSrc} alt="" className="rounded-full" style={{ width: 150, height: 150 }} />
@@ -121,8 +121,8 @@ const Testimonials = () => {
                                                     fill="#FFB657" />
                                             </svg> */}
                                         </div>
-                                        <div className="text-sm md:text-[15px] leading-loose content overflow-hidden max-h-20">
-                                            <div style={{ WebkitLineClamp: 4, display: '-webkit-box', WebkitBoxOrient: 'vertical' }}>
+                                        <div className="text-sm md:text-[15px] leading-loose testi-content" style={{ maxHeight: "calc(1.5em * 5)", overflowY: "auto", scrollbarWidth: "none" }}>
+                                            <div>
                                                 {testimonial.content}
                                             </div>
                                         </div>
