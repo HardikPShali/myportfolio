@@ -7363,4 +7363,102 @@ html.dark .portfolio_wrapper .info span {
   display: none; /* Hide the scrollbar */
 }
 
+/* Add this to your existing styles or create a new CSS file */
 
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  /* Your specified background color */
+  color: #333;
+  /* Dark text color for better contrast */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  /* Increase box-shadow on hover */
+  transform: scale(1.02);
+  /* Slightly scale up on hover */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #c9f31d;
+  /* Change the color on hover to match the background */
+}
+
+/* Heading */
+.modal-content h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.modal-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Link */
+.modal-content a {
+  color: #2ecc71;
+  /* Green link color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.modal-content a:hover {
+  color: #27ae60;
+  /* Darker green on hover */
+}
+
+/* Hover Effect */
+.modal-content:hover {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+  /* Further increase box-shadow on hover */
+  transform: scale(1.05);
+  /* Slightly scale up on hover */
+}
+
+
+
+/*# sourceMappingURL=main.css.map */
