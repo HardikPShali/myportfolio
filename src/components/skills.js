@@ -2,14 +2,24 @@ import React, { useState, useEffect } from 'react';
 
 const Skills = () => {
     const skillsData = [
-        { id: 1, name: 'Figma', percent: 90, image: 'assets/img/skill/figma.svg' },
-        { id: 2, name: 'Webflow', percent: 85, image: 'assets/img/skill/webflow.svg' },
+        { id: 1, name: 'ReactJs', percent: 90, image: 'assets/img/skill/reactjs.svg' },
+        { id: 2, name: 'NextJs', percent: 85, image: 'assets/img/skill/nextjs.svg' },
         { id: 3, name: 'Tailwind', percent: 90, image: 'assets/img/skill/tailwind.svg' },
         { id: 4, name: 'HTML5', percent: 95, image: 'assets/img/skill/html.svg' },
         { id: 5, name: 'CSS3', percent: 95, image: 'assets/img/skill/css.svg' },
         { id: 6, name: 'JavaScript', percent: 75, image: 'assets/img/skill/js.svg' },
-        { id: 7, name: 'jQuery', percent: 70, image: 'assets/img/skill/jquery.svg' },
-        // Add more skills as needed
+        { id: 7, name: 'Bootstrap 5', percent: 90, image: 'assets/img/skill/bootstrap.jpg' },
+        { id: 8, name: 'SQL', percent: 85, image: 'assets/img/skill/sql.png' },
+        { id: 9, name: 'DotNet', percent: 90, image: 'assets/img/skill/dotnet.svg' },
+        { id: 10, name: 'Python', percent: 95, image: 'assets/img/skill/python.png' },
+        { id: 11, name: 'Git', percent: 95, image: 'assets/img/skill/merge.png' },
+        { id: 12, name: 'Jira', percent: 75, image: 'assets/img/skill/jira.png' },
+        { id: 13, name: 'REST API', percent: 75, image: 'assets/img/skill/api.png' },
+        { id: 14, name: 'Typescript', percent: 75, image: 'assets/img/skill/typescript.png' },
+        { id: 15, name: 'Material UI', percent: 75, image: 'assets/img/skill/mui.png' },
+        { id: 16, name: 'Redux', percent: 75, image: 'assets/img/skill/redux.png' },
+        { id: 17, name: 'NPM', percent: 75, image: 'assets/img/skill/npm.png' },
+        { id: 18, name: 'Java', percent: 75, image: 'assets/img/skill/java.png' },
     ];
 
     const [startIndex, setStartIndex] = useState(0);
@@ -45,7 +55,7 @@ const Skills = () => {
             // Code to set the progress circle based on the percent
         });
     }, [displayedSkills]);
-    
+
     return (
         <div data-scroll-index="3" id="skill"
             class="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
@@ -62,8 +72,7 @@ const Skills = () => {
                         My <span class="font-semibold text-theme">Advantages</span>
                     </h2>
                     <p class="max-w-xl mt-4 md:mt-6 subtitle">
-                        I design products that are more than pretty. I make them shippable and usable, ttempor
-                        non mollit dolor et do aute
+                        I specialize in creating engaging and responsive user interfaces, utilizing a variety of technologies to bring web applications to life.
                     </p>
                 </div>
 
@@ -71,7 +80,7 @@ const Skills = () => {
                     <div className="flex justify-center space-x-5" style={{ justifyContent: 'space-around' }}>
                         {displayedSkills.map(skill => (
                             <div key={skill.id} className="space-y-5 text-center">
-                                <div className="text-center icon">
+                                <div className="text-center icon" style={{ width: '50px' }}>
                                     <img src={skill.image} className="dark:grayscale" alt={skill.name} />
                                 </div>
                                 {/* <div className="progressCircle">
