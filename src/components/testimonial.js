@@ -24,7 +24,7 @@ const Testimonials = () => {
             author: "Nithya Rajan",
             role: "Technical Team Lead",
             linkedin: "https://www.linkedin.com/in/bearnithi/",
-            imageSrc: "assets/img/testimonial/NithyaSmall.png"
+            imageSrc: "assets/img/testimonial/Nithya.jpg"
         },
         {
             rating: 5,
