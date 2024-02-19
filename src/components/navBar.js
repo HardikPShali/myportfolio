@@ -114,16 +114,16 @@ const navBar = () => {
                 {/* <!-- Social Share Icon Start  --> */}
                 <div
                     class="absolute bottom-0 flex items-center invisible px-5 py-6 space-x-3 transition-all duration-300 -translate-y-1/2 opacity-0 social-icons top-1/2 bg-white dark:bg-nightBlack rounded-4xl right-6 group-hover:opacity-100 group-hover:visible group-hover:right-10 -z-1">
-                    <a href="#" class="flex transition duration-200 hover:text-theme" title="Share with Facebook">
+                    <a target='_blank' href="https://www.facebook.com/hardik.sali.71/" class="flex transition duration-200 hover:text-theme" title="Share with Facebook">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="#" class="flex transition duration-200 hover:text-theme" title="Share with Linkedin">
+                    <a target='_blank' href="https://www.linkedin.com/in/hardikshali/" class="flex transition duration-200 hover:text-theme" title="Share with Linkedin">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="flex transition duration-200 hover:text-theme" title="Share with X">
-                        <i class="fab fa-twitter"></i>
+                    <a target='_blank' href="https://github.com/HardikPShali" class="flex transition duration-200 hover:text-theme" title="Share with X">
+                        <i className="fab fa-github"></i>
                     </a>
-                    <a href="#" class="flex transition duration-200 hover:text-theme" title="Share with X">
+                    <a target='_blank' href="https://www.instagram.com/hardiiksali/" class="flex transition duration-200 hover:text-theme" title="Share with X">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>

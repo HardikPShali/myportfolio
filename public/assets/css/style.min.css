@@ -2843,9 +2843,9 @@ html.dark input:-webkit-autofill,
   background-color: currentColor;
 }
 
-.bg-flashWhite {
+/* .bg-flashWhite {
   background-color: var(--flashWhite);
-}
+} */
 
 .bg-greyBlack {
   background-color: var(--greyBlack);
