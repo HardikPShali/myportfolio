@@ -1,29 +1,66 @@
-import React from 'react'
+import React from 'react';
+import emailjs from 'emailjs-com';
+const Contact = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = {
+            clientName: e.target.client__name.value,
+            clientEmail: e.target.client_email.value,
+            contactMessage: e.target.contact__message.value
+        };
 
-const contact = () => {
+        const emailTemplate = `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Contact Form Submission</title>
+            </head>
+            <body>
+                <h2>Contact Form Submission</h2>
+                <p><strong>Name:</strong> ${formData.clientName}</p>
+                <p><strong>Email:</strong> ${formData.clientEmail}</p>
+                <p><strong>Message:</strong> ${formData.contactMessage}</p>
+            </body>
+            </html>
+        `;
+
+        // Send email using EmailJS
+        emailjs.send('service_sz164ke', 'template_tgr61l7', {
+            from_name: formData.clientName,
+            to_email: formData.clientEmail,
+            message_html: formData.contactMessage
+        }, 'vHigmNMsIF2e2AGm4')
+            .then((result) => {
+                console.log(result.text);
+                // Clear form fields if the email is sent successfully
+                e.target.reset();
+            })
+            .catch((error) => {
+                console.log(error.text);
+                // Handle error
+            });
+    };
+
     return (
-        <div data-scroll-index="8" id="contact"
-            class="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
-
-            <div class="px-5 py-8 bg-white dark:bg-nightBlack rounded-2xl contact-section lg:p-13">
-                <div
-                    class="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-wide text-black dark:text-white border lg:px-5 section-name border-platinum dark:border-greyBlack200 rounded-4xl">
-                    <i class="fal fa-envelope-open text-theme"></i>
+        <div data-scroll-index="8" id="contact" className="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
+            <div className="px-5 py-8 bg-white dark:bg-nightBlack rounded-2xl contact-section lg:p-13">
+                <div className="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-wide text-black dark:text-white border lg:px-5 section-name border-platinum dark:border-greyBlack200 rounded-4xl">
+                    <i className="fal fa-envelope-open text-theme"></i>
                     CONTACT
                 </div>
-                <div class="mb-10 mt-7 section-title">
-                    <h2
-                        class="title text-[32px] md:text-4xl lg:text-5xl font-extralight text-black dark:text-white leading-1.27">
-                        Contact <span class="font-semibold text-theme">Me.</span>
+                <div className="mb-10 mt-7 section-title">
+                    <h2 className="title text-[32px] md:text-4xl lg:text-5xl font-extralight text-black dark:text-white leading-1.27">
+                        Contact <span className="font-semibold text-theme">Me.</span>
                     </h2>
-                    <p class="mt-3.5 md:mt-5 subtitle max-w-sectionTitle">
-                        I design products that are more than pretty. I make them shippable and usable, ttempor
-                        non mollit dolor et do aute
+                    <p className="mt-3.5 md:mt-5 subtitle max-w-sectionTitle">
+                        I design products that are more than pretty. I make them shippable and usable, ttempor non mollit dolor et do aute
                     </p>
                 </div>
 
-                <div class="grid gap-12 mt-8 mb-10 md:my-12 md:grid-cols-12">
-                    <div class="md:col-span-5">
+                <div className="grid gap-12 mt-8 mb-10 md:my-12 md:grid-cols-12">
+                    <div className="md:col-span-5">
                         <ul class="space-y-6 md:space-y-10 2xl:space-y-12 contact-info">
                             <li class="flex flex-wrap items-center gap-5 ">
                                 <div class="flex justify-center w-12 icon">
@@ -93,41 +130,29 @@ const contact = () => {
                         </ul>
                     </div>
 
-                    <div class="md:col-span-7">
-                        <form id="contactForm" action="https://minfotailwind.netlify.app/contact-form.php" method="POST" class="space-y-4">
-                            <div class="form-group">
-                                <input type="text" name="client__name" id="client__name" placeholder="Name"
-                                    class="w-full p-5 text-sm outline-none h-13 focus:border-theme dark:focus:border-theme dark:placeholder:text-white/40"
-                                    required />
+                    <div className="md:col-span-7">
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <div className="form-group">
+                                <input type="text" name="client__name" placeholder="Name" className="w-full p-5 text-sm outline-none h-13 focus:border-theme dark:focus:border-theme dark:placeholder:text-white/40" required />
                             </div>
-                            <div class="form-group">
-                                <input type="email" name="client_email" id="client_email" placeholder="E-Mail"
-                                    class="w-full p-5 text-sm outline-none h-13 focus:border-theme dark:focus:border-theme dark:placeholder:text-white/40"
-                                    required />
+                            <div className="form-group">
+                                <input type="email" name="client_email" placeholder="E-Mail" className="w-full p-5 text-sm outline-none h-13 focus:border-theme dark:focus:border-theme dark:placeholder:text-white/40" required />
                             </div>
-                            <div class="form-group">
-                                <textarea name="contact__message" placeholder="Message" rows="5"
-                                    class="w-full px-5 py-4 text-sm outline-none focus:border-theme dark:placeholder:text-white/40"></textarea>
+                            <div className="form-group">
+                                <textarea name="contact__message" placeholder="Message" rows="5" className="w-full px-5 py-4 text-sm outline-none focus:border-theme dark:placeholder:text-white/40"></textarea>
                             </div>
-                            <div class=" form-group">
-                                <button type="submit"
-                                    class="inline-flex items-center gap-2 text-[15px] font-medium border border-theme bg-theme text-white py-4.5 px-9 rounded-4xl leading-none transition-all duration-300 hover:bg-themeHover hover:border-themeHover"
-                                    aria-label="Send Message">
+                            <div className=" form-group">
+                                <button type="submit" className="inline-flex items-center gap-2 text-[15px] font-medium border border-theme bg-theme text-white py-4.5 px-9 rounded-4xl leading-none transition-all duration-300 hover:bg-themeHover hover:border-themeHover" aria-label="Send Message">
                                     Send Message
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <iframe
-                    class="w-full overflow-hidden border-10 border-platinum dark:border-greyBlack embed-map h-80 2xl:h-96 rounded-2xl"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25908.703277839155!2d-74.18208878159237!3d40.640176526919696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1699271377092!5m2!1sen!2sbd"
-                    aria-label="Contact Map">
-                </iframe>
+                {/* Your map iframe */}
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default contact
+export default Contact;
