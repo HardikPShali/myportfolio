@@ -75,8 +75,8 @@ const Testimonials = () => {
                         What <span class="font-semibold text-theme">People Say</span>
                     </h2>
                     <p class="max-w-xl mt-4 md:mt-6 subtitle">
-                        I design products that are more than pretty. I make them shippable and usable, tempor
-                        non mollit dolor et do aute
+                        Positive Feedback From
+                        Peers
                     </p>
                 </div>
 
