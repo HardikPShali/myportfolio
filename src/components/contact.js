@@ -55,7 +55,7 @@ const Contact = () => {
                         Contact <span className="font-semibold text-theme">Me.</span>
                     </h2>
                     <p className="mt-3.5 md:mt-5 subtitle max-w-sectionTitle">
-                        I design products that are more than pretty. I make them shippable and usable, ttempor non mollit dolor et do aute
+                        Let's Work Together. Fixed A Meeting
                     </p>
                 </div>
 
@@ -75,7 +75,7 @@ const Contact = () => {
                                 </div>
                                 <div class="flex-1">
                                     <h6 class="text-lg text-black dark:text-white">Location</h6>
-                                    <p class="text-sm">Melbourne Street. No 20</p>
+                                    <p class="text-sm">Berlin, Germany</p>
                                 </div>
                             </li>
                             <li class="flex flex-wrap items-center gap-5">
@@ -101,7 +101,7 @@ const Contact = () => {
                                 </div>
                                 <div class="flex-1">
                                     <h6 class="text-lg text-black dark:text-white">E-mail</h6>
-                                    <p class="text-sm">smith@gmail.com</p>
+                                    <p class="text-sm">hardikshali1612@gmail.com</p>
                                 </div>
                             </li>
                             <li class="flex flex-wrap items-center gap-5">
@@ -124,7 +124,7 @@ const Contact = () => {
                                 </div>
                                 <div class="flex-1">
                                     <h6 class="text-lg text-black dark:text-white">Phone</h6>
-                                    <p class="text-sm">+976 34 99 99</p>
+                                    <p class="text-sm">+91 9724641610</p>
                                 </div>
                             </li>
                         </ul>
