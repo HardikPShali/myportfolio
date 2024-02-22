@@ -16,10 +16,6 @@ const Introduce = () => {
         { id: 1, src: 'assets/img/partners/RL.png', link: 'https://www.ralphlauren.com/' },
         { id: 2, src: 'assets/img/partners/f.png', link: 'https://www.futuregrail.com/' },
         { id: 3, src: 'assets/img/partners/h.png', link: 'https://www.instagram.com/healthieru_ae/' },
-        // { id: 4, src: 'assets/img/partners/logo1.svg' },
-        // { id: 5, src: 'assets/img/partners/logo2.svg' },
-        // { id: 6, src: 'assets/img/partners/logo3.svg' },
-        // { id: 7, src: 'assets/img/partners/logo4.svg' },
     ];
     const [startIndex, setStartIndex] = useState(0);
     const [displayedImages, setDisplayedImages] = useState([]);
