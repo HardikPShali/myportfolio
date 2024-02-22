@@ -6,7 +6,12 @@ const Footer = () => {
     useEffect(() => {
         const fetchLastCommitDate = async () => {
             try {
-                const response = await fetch('https://api.github.com/repos/HardikPShali/myportfolio/commits?per_page=1');
+                const accessToken = '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';
+                const response = await fetch('https://api.github.com/repos/HardikPShali/myportfolio/commits?per_page=1', {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`
+                    }
+                });
                 const data = await response.json();
 
                 if (data && data.length > 0) {
@@ -22,6 +27,7 @@ const Footer = () => {
                 console.error('Error fetching last commit date:', error);
             }
         };
+
 
         fetchLastCommitDate();
     }, []);;
