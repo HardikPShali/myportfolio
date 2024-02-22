@@ -4,7 +4,6 @@ import Swiper from 'swiper';
 
 const Introduce = () => {
     useEffect(() => {
-        console.log('Initializing Swiper');
         new Swiper('.swiper', {
             // Swiper options here
             slidesPerView: 3,

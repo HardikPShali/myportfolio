@@ -1,48 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 const Contact = () => {
-    const handleSubmit = (e) => {
+    const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({
+        clientName: '',
+        clientEmail: '',
+        contactMessage: ''
+    });
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
         const formData = {
             clientName: e.target.client__name.value,
             clientEmail: e.target.client_email.value,
             contactMessage: e.target.contact__message.value
         };
 
-        const emailTemplate = `
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Contact Form Submission</title>
-            </head>
-            <body>
-                <h2>Contact Form Submission</h2>
-                <p><strong>Name:</strong> ${formData.clientName}</p>
-                <p><strong>Email:</strong> ${formData.clientEmail}</p>
-                <p><strong>Message:</strong> ${formData.contactMessage}</p>
-            </body>
-            </html>
-        `;
+        // Basic validation
+        const newErrors = {};
+        if (!formData.clientName) {
+            newErrors.clientName = 'Please enter your name.';
+        }
+        if (!formData.clientEmail) {
+            newErrors.clientEmail = 'Please enter your email.';
+        } else {
+            // Advanced email validation using regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.clientEmail)) {
+                newErrors.clientEmail = 'Please enter a valid email address.';
+            }
+        }
+        if (!formData.contactMessage) {
+            newErrors.contactMessage = 'Please enter your message.';
+        }
 
-        // Send email using EmailJS
-        emailjs.send('service_sz164ke', 'template_tgr61l7', {
-            from_name: formData.clientName,
-            to_email: formData.clientEmail,
-            message_html: formData.contactMessage
-        }, 'vHigmNMsIF2e2AGm4')
-            .then((result) => {
-                console.log(result.text);
-                // Clear form fields if the email is sent successfully
-                e.target.reset();
-            })
-            .catch((error) => {
-                console.log(error.text);
-                // Handle error
+        // If there are errors, update the state and return
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            // Send email using EmailJS
+            const result = await emailjs.send('service_sz164ke', 'template_tgr61l7', {
+                from_name: formData.clientName,
+                to_email: formData.clientEmail,
+                message_html: formData.contactMessage
+            }, 'vHigmNMsIF2e2AGm4');
+            // Clear form fields if the email is sent successfully
+            e.target.reset();
+            setErrors({
+                clientName: '',
+                clientEmail: '',
+                contactMessage: ''
             });
+        } catch (error) {
+            // Handle error
+        } finally {
+            setLoading(false);
+        }
     };
-
     return (
         <div data-scroll-index="8" id="contact" className="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
             <div className="px-5 py-8 bg-white dark:bg-nightBlack rounded-2xl contact-section lg:p-13">
@@ -134,16 +154,19 @@ const Contact = () => {
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div className="form-group">
                                 <input type="text" name="client__name" placeholder="Name" className="w-full p-5 text-sm outline-none h-13 focus:border-theme dark:focus:border-theme dark:placeholder:text-white/40" required />
+                                {errors.clientName && <p className="text-red-500">{errors.clientName}</p>}
                             </div>
                             <div className="form-group">
                                 <input type="email" name="client_email" placeholder="E-Mail" className="w-full p-5 text-sm outline-none h-13 focus:border-theme dark:focus:border-theme dark:placeholder:text-white/40" required />
+                                {errors.clientEmail && <p className="text-red-500">{errors.clientEmail}</p>}
                             </div>
                             <div className="form-group">
                                 <textarea name="contact__message" placeholder="Message" rows="5" className="w-full px-5 py-4 text-sm outline-none focus:border-theme dark:placeholder:text-white/40"></textarea>
+                                {errors.contactMessage && <p className="text-red-500">{errors.contactMessage}</p>}
                             </div>
-                            <div className=" form-group">
-                                <button type="submit" className="inline-flex items-center gap-2 text-[15px] font-medium border border-theme bg-theme text-white py-4.5 px-9 rounded-4xl leading-none transition-all duration-300 hover:bg-themeHover hover:border-themeHover" aria-label="Send Message">
-                                    Send Message
+                            <div className="form-group">
+                                <button type="submit" className="inline-flex items-center gap-2 text-[15px] font-medium border border-theme bg-theme text-white py-4.5 px-9 rounded-4xl leading-none transition-all duration-300 hover:bg-themeHover hover:border-themeHover" aria-label="Send Message" disabled={loading}>
+                                    {loading ? 'Sending...' : 'Send Message'}
                                 </button>
                             </div>
                         </form>
