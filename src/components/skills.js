@@ -22,6 +22,7 @@ const Skills = () => {
         { id: 18, name: 'Java', percent: 75, image: 'assets/img/skill/java.png' },
     ];
 
+
     const [startIndex, setStartIndex] = useState(0);
     const [displayedSkills, setDisplayedSkills] = useState(skillsData.slice(startIndex, startIndex + 3));
 
@@ -32,6 +33,10 @@ const Skills = () => {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        setDisplayedSkills(skillsData.slice(startIndex, startIndex + 3));
+    }, [startIndex, skillsData]);
+
     const nextSkills = () => {
         setStartIndex(prevIndex => (prevIndex + 3) % skillsData.length);
     };
@@ -39,10 +44,6 @@ const Skills = () => {
     const prevSkills = () => {
         setStartIndex(prevIndex => (prevIndex === 0 ? skillsData.length - 3 : prevIndex - 3));
     };
-
-    useEffect(() => {
-        setDisplayedSkills(skillsData.slice(startIndex, startIndex + 3));
-    }, [startIndex]);
 
     return (
         <div data-scroll-index="3" id="skill"
@@ -69,7 +70,11 @@ const Skills = () => {
                         {displayedSkills.map(skill => (
                             <div key={skill.id} className="space-y-5 text-center">
                                 <div className="text-center icon" style={{ width: '50px' }}>
-                                    <img src={skill.image} className="dark:grayscale" alt={skill.name} />
+                                    <img
+                                        src={skill.image}
+                                        className={`dark:grayscale skill-image`}
+                                        alt={skill.name}
+                                    />
                                 </div>
                                 {/* <div className="progressCircle">
                                     <div className="relative w-32 h-32 mx-auto circle md:w-40 md:h-40" data-percent={skill.percent}>

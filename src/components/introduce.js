@@ -7,8 +7,7 @@ const Introduce = () => {
         new Swiper('.swiper', {
             // Swiper options here
             slidesPerView: 3,
-            spaceBetween: 30,
-            // Add more options as needed
+            spaceBetween: 30
         });
     }, []);
 

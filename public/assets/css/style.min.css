@@ -7459,6 +7459,16 @@ html.dark .portfolio_wrapper .info span {
   /* Slightly scale up on hover */
 }
 
+.skill-image {
+  width: 50px; /* Or adjust as needed */
+  height: 50px; /* Or adjust as needed */
+  transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.skill-image.hide {
+  opacity: 0; /* Hide image */
+}
+
 
 
 /*# sourceMappingURL=main.css.map */
