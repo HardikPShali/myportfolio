@@ -62,7 +62,7 @@ function App() {
             <Certificates />
             <Testimonial />
             <Contact />
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </div>
       </div>

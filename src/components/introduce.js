@@ -22,7 +22,7 @@ const Introduce = () => {
 
     useEffect(() => {
         setDisplayedImages(imagesData.slice(startIndex, startIndex + 3));
-    }, [startIndex, imagesData]);
+    }, [startIndex]);
 
     useEffect(() => {
         const interval = setInterval(() => {
