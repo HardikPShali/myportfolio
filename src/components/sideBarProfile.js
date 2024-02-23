@@ -48,7 +48,7 @@ const sideBarProfile = () => {
                     </div>
 
 
-                    <div class="px-4 py-5 lg:py-6 lg:px-6 rounded-2xl md:px-8 bg-flashWhite dark:bg-metalBlack" style={{ backgroundColor: 'white' }}>
+                    <div class="px-4 py-5 lg:py-6 lg:px-6 rounded-2xl md:px-8 bg-White dark:bg-Black">
                         {/* <div class="text-sm font-medium text-black dark:text-white">Skills</div>
                         <div class="flex items-center justify-between my-4 space-x-4 skills_circle">
                             <div class="space-y-2 text-center progressCircle">

@@ -45,12 +45,12 @@ const certificates = () => {
                                 </div>
                             </div>
                             <div class="post-title mt-3 md:mt-4.5 mb-6 md:mb-8">
-                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme' href='https://www.udemy.com/certificate/UC-01eef055-84cb-4773-aeca-7ff22e83a662/' target='_target'>
+                                <a class='text-xl font-semibold leading-normal text-black dark:text-white transition-colors line-clamp-2 2xl:text-2xl 2xl:leading-normal hover:text-theme'>
                                     The Complete 2024 Web Development Bootcamp
                                 </a>
                             </div>
                             <div class="read-details">
-                                <a class='inline-flex items-center gap-2 border border-theme text-theme text-sm py-3.5 px-6 rounded-3xl leading-none transition-all duration-300 hover:bg-themeHover hover:border-themeHover dark:font-medium hover:text-white'>
+                                <a class='inline-flex items-center gap-2 border border-theme text-theme text-sm py-3.5 px-6 rounded-3xl leading-none transition-all duration-300 hover:bg-themeHover hover:border-themeHover dark:font-medium hover:text-white' href='https://www.udemy.com/certificate/UC-01eef055-84cb-4773-aeca-7ff22e83a662/' target='_target'>
                                     See Certificate
                                 </a>
                             </div>
