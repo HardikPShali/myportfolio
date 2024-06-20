@@ -41,7 +41,7 @@ const about = () => {
                         <li class="flex items-center">
                             <span class="flex-[0_0_6rem]">Phone</span>
                             <span class="flex-[0_0_2rem]">:</span>
-                            <span class="text-black dark:text-white"><a href="tel:+919724641610 callto:+919724641610">+(91) 97246-41610</a> </span>
+                            <span class="text-black dark:text-white"><a href="tel:+919724641610 callto:+4915739438462">+(49) 157-39438462</a> </span>
                         </li>
                         <li class="flex items-center">
                             <span class="flex-[0_0_6rem]">Email</span>
