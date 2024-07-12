@@ -103,7 +103,7 @@ const MobileMenus = ({ toggleMenu, isMenuOpen }) => {
                                 <i className="fal fa-blog"></i>
                             </span>
                             <span className="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                                Blog
+                                Learning
                             </span>
                         </a>
                     </li>

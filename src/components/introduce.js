@@ -72,10 +72,10 @@ const Introduce = () => {
                         </ul>
 
                     </div>
-                    <div class="hero-image flex-[0_0_20.3rem] max-md:hidden">
+                    {/* <div class="hero-image flex-[0_0_20.3rem] max-md:hidden">
                         <img src="assets/img/me12-whitetheme.png" class="dark:hidden" alt="Hero Image - Light Mode" />
                         <img src="assets/img/me12-darktheme.png" class="hidden dark:block" alt="Hero Image - Dark Mode" />
-                    </div>
+                    </div> */}
                 </div>
                 <div class="mb-2 mt-14 xl:mb-0 xl:mt-20">
                     <div class="items-center grid-cols-12 overflow-hidden md:grid">
