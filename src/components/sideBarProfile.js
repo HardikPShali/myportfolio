@@ -77,7 +77,7 @@ const sideBarProfile = () => {
                             </div>
                         </div> */}
                         <div class="mt-6">
-                            <a href="assets/img/HardikShaliResume.pdf" download target="_blank"
+                            <a href="assets/img/HardikShali_Resume.pdf" download target="_blank"
                                 class="text-center text-sm border border-theme bg-theme flex items-center justify-center gap-2 text-white rounded-4xl py-3.5 transition duration-300 text-[15px] font-semibold hover:bg-themeHover hover:border-themeHover">
                                 DOWNLOAD CV
                                 <span class="animate-bounce">
