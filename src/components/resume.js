@@ -45,7 +45,7 @@ const resume = () => {
                             //         Location - Remote
                             //     </p> */}
                             // </div>
-                        </li>
+                        // </li>
                         <li
                             class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
                             <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
