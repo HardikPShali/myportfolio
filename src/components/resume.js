@@ -51,7 +51,7 @@ const resume = () => {
                             <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
                                 <h6
                                     class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">
-                                    <a href='https://www.dataio.co/' target='_blank'>Dataio</a>
+                                    <a href='https://www.dataio.co/' target='_blank'>ThaoughtSpark</a>
                                 </h6>
                                 <p class="text-[13px] md:text-sm text-theme">
                                     Apr 2023 - Sep 2023
