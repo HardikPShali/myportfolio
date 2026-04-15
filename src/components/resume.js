@@ -24,8 +24,8 @@ const resume = () => {
                 <div class="experience">
                     <ul
                         class="space-y-5 md:space-y-11 relative md:before:content-[''] md:before:absolute md:before:left-64 md:before:border-r md:before:border-platinum md:dark:before:border-metalBlack md:before:h-[calc(100%_-1.5rem)] md:before:top-1/2 md:before:-translate-y-1/2">
-                        <li
-                            class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+                        // <li
+                        //     class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
                             // <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
                             //     <h6
                             //         class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">
